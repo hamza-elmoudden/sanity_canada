@@ -2,12 +2,12 @@ import { defineType, defineField } from "sanity";
 
 export const footer = defineType({
   name: "footer",
-  titile: "Footer",
+  title: "Footer",
   type: "document",
   fields: [
     defineField({
       name: "title",
-      titile: "Title Footer",
+      title: "Title Footer",
       type: "localeString",
     }),
     defineField({
