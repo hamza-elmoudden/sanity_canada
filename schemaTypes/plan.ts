@@ -13,7 +13,7 @@ export const plan = defineType({
     }),
 
     defineField({
-      name: "Shortdescription",
+      name: "shortDescription",
       title: "Short Description",
       type: "localeText",
       validation: (R) => R.required(),
@@ -36,7 +36,7 @@ export const plan = defineType({
       type: "string",
       options: {
         list: [
-          { title: "Polish złoty (zł)", value: "PLN" },
+          { title: "Canadian dollar (CA$)", value: "CAD" },
           { title: "Euro (€)", value: "EUR" },
           { title: "US dollar ($)", value: "USD" },
           { title: "British pound (£)", value: "GBP" },
@@ -44,7 +44,7 @@ export const plan = defineType({
         layout: "radio",
         direction: "horizontal",
       },
-      initialValue: "PLN",
+      initialValue: "CAD",
       validation: (R) => R.required(),
     }),
     defineField({
@@ -88,8 +88,8 @@ export const plan = defineType({
       media: "image",
     },
     prepare({ title, price, currency, media }) {
-      const symbols: Record<string, string> = { PLN: "zł", EUR: "€", USD: "$", GBP: "£" };
-      return { title, subtitle: `${price ?? "—"} ${symbols[currency ?? "PLN"] ?? currency}`, media };
+      const symbols: Record<string, string> = { CAD: "CA$", EUR: "€", USD: "$", GBP: "£" };
+      return { title, subtitle: `${price ?? "—"} ${symbols[currency ?? "CAD"] ?? currency}`, media };
     },
   },
 });
