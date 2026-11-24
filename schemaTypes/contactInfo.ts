@@ -11,7 +11,7 @@ export const contactInfo = defineType({
       name: 'whatsapp',
       title: 'WhatsApp Number',
       type: 'string',
-      description: 'Include country code, e.g. +48123456789',
+      description: 'Include country code, e.g. +15145551234 (Canada +1)',
       validation: (R) => R.regex(/^\+?[0-9\s\-()]{7,20}$/, { name: 'phone number' }),
     }),
     defineField({
